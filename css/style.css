@@ -1,3 +1,64 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style-type: none;
+}
+/**-------------------------HEADER---------------**/
+.header-logo {
+  color: #111;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+}
+.header-logo-acent {
+  font-style: italic;
+}
+.header-menu-link {
+  color: #111;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+.header-menu-link:hover,
+.header-menu-link:focus {
+  color: #fd9222;
+}
+
+/**-----------------------HERO----------------**/
+.hero {
+  background: gray;
+}
+.hero-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+}
+.hero-btn {
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #fd9222;
+  cursor: pointer;
+}
+.hero-link {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.hero-down {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.03em;
+}
