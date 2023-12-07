@@ -3,9 +3,33 @@
   --main-text-color: #111;
   --secondary-text-color: #fff;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+.container {
+  max-width: 1167px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid black;
 }
 .link {
   text-decoration: none;
@@ -26,15 +50,42 @@ body {
   overflow: hidden;
 }
 /**-------------------------HEADER---------------**/
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
 .header-logo {
   color: var(--main-text-color);
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
   letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
 }
 .header-logo-acent {
   font-style: italic;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+.header-navigation {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+.header-menu {
+  display: flex;
+  gap: 24px;
+}
+.header-socials {
+  display: flex;
+
+  gap: 18px;
 }
 .header-menu-link {
   color: var(--main-text-color);
