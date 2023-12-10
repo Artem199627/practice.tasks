@@ -22,9 +22,10 @@ ol {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
 }
 .container {
-  max-width: 1167px;
+  max-width: 1166px;
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -102,7 +103,11 @@ body {
 
 /**-----------------------HERO----------------**/
 .hero {
-  background: gray;
+}
+.hero-container {
+  background-color: gray;
+  border-radius: 30px;
+  padding: 380px 40px 40px 40px;
 }
 .hero-title {
   color: var(--secondary-text-color);
@@ -110,6 +115,8 @@ body {
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.03em;
+  max-width: 484px;
+  margin-bottom: 32px;
 }
 .hero-btn {
   color: var(--secondary-text-color);
@@ -118,11 +125,18 @@ body {
   font-weight: 600;
   background-color: var(--accent-color);
   cursor: pointer;
+  padding: 14px 40px;
+  border-radius: 100px;
+  border: none;
+  margin-right: 14px;
 }
 .hero-link {
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 600;
+  padding: 14px 40px;
+  border-radius: 100px;
+  border: 1px solid #fff;
 }
 .hero-down {
   color: var(--secondary-text-color);
@@ -130,21 +144,34 @@ body {
   font-weight: 500;
   line-height: 1.29;
   letter-spacing: -0.03em;
+  margin-left: auto;
+}
+.hero-buttons {
+  display: flex;
+  align-items: center;
 }
 
 /**-------------------------ADVANTAGES-----------**/
 .advantages {
   background-color: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .advantages-list {
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  gap: 88px;
 }
 
 .advantages-item {
+  width: calc((100% - 88px * 2) / 3);
 }
 .advantages-subtitle {
   color: var(--secondary-text-color);
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 18px;
 }
 .advantages-item-text {
   color: rgba(255, 255, 255, 0.7);
