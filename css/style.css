@@ -89,8 +89,13 @@ body {
 }
 .header-socials {
   display: flex;
-
   gap: 18px;
+}
+.header-socials-link {
+  display: block;
+}
+.header-socials-item {
+  height: 24px;
 }
 .header-menu-link {
   color: var(--main-text-color);
@@ -104,12 +109,22 @@ body {
 .header-menu-link:focus {
   color: var(--accent-color);
 }
+.header-socials-link:is(:hover, :focus) .header-socials-icon {
+  fill: var(--accent-color);
+}
 
 /**-----------------------HERO----------------**/
 .hero {
   padding-bottom: 79px;
 }
 .hero-container {
+  background-image: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url(../images/hero.jpg);
+
   background-color: gray;
   border-radius: 30px;
   padding: 380px 40px 40px 40px;
@@ -171,6 +186,19 @@ body {
 
 .advantages-item {
   width: calc((100% - 88px * 2) / 3);
+}
+.advantages-block {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.advantages-icon {
+  fill: var(--accent-color);
 }
 .advantages-subtitle {
   color: var(--secondary-text-color);
