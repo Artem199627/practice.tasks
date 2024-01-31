@@ -104,15 +104,31 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: -0.02em;
+  transition: color 300ms ease;
 }
 .header-menu-link:hover,
 .header-menu-link:focus {
   color: var(--accent-color);
 }
+.header-socials-icon {
+  transition: fill 300ms ease;
+}
 .header-socials-link:is(:hover, :focus) .header-socials-icon {
   fill: var(--accent-color);
 }
-
+.current {
+  position: relative;
+}
+.current::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  bottom: -29px;
+  background-color: var(--accent-color);
+  left: 0;
+}
 /**-----------------------HERO----------------**/
 .hero {
   padding-bottom: 79px;
@@ -149,14 +165,29 @@ body {
   border-radius: 100px;
   border: none;
   margin-right: 14px;
+  transition: color 300ms ease, background 300ms ease;
 }
-.hero-link {
+.hero-btn:hover,
+.hero-btn:focus {
+  background: #fcf1e0;
+  color: var(--accent-color);
+}
+.hero-button {
   color: var(--secondary-text-color);
   font-size: 14px;
   font-weight: 600;
   padding: 14px 40px;
   border-radius: 100px;
   border: 1px solid #fff;
+  background: #1e1823;
+  cursor: pointer;
+  transition: color 300ms ease, background 300ms ease, border 300ms ease;
+}
+.hero-button:hover,
+.hero-button:focus {
+  color: var(--accent-color);
+  background: #fafafa;
+  border: 1px solid var(--accent-color);
 }
 .hero-down {
   color: var(--secondary-text-color);
@@ -186,6 +217,20 @@ body {
 
 .advantages-item {
   width: calc((100% - 88px * 2) / 3);
+  position: relative;
+}
+.advantages-item:last-child::after {
+  display: none;
+}
+.advantages-item::after {
+  content: "";
+  position: absolute;
+  right: -44px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 124px;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .advantages-block {
   width: 62px;
@@ -254,6 +299,125 @@ body {
   background: #fff;
   width: calc((100% - 19px * 3) / 4);
   padding: 28px 36px 28px 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.taste-item:hover .taste-cover-text {
+  transform: translateY(0);
+}
+.taste-cover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #111;
+  text-overflow: ellipsis;
+  height: 100%;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  background-color: var(--secondary-text-color);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 300ms ease;
+}
+.taste-cover-header {
+  color: #111;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  width: 163px;
+  height: 22px;
+  margin-bottom: 8px;
+}
+.taste-cover-btn {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.taste-cover-btn1 {
+  width: 81px;
+  height: 24px;
+  border-radius: 35px;
+  background: var(--accent-color);
+  border: none;
+  padding: 6px 16px;
+}
+.taste-cover-btn2 {
+  width: 93px;
+  height: 24px;
+  padding: 6px 16px;
+  border-radius: 35px;
+  border: 1px solid var(--accent-color);
+  background: #fafafa;
+}
+.taste-cover-text-btn1 {
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  width: 49px;
+  height: 12px;
+}
+.taste-cover-text-btn2 {
+  color: #111;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+  width: 61px;
+  height: 12px;
+  font-family: Montserrat;
+}
+.taste-cover-btn3 {
+  width: 54px;
+  height: 24px;
+  border-radius: 35px;
+  background: var(--accent-color);
+  border: none;
+  padding: 6px 16px;
+}
+.taste-cover-text-btn3 {
+  width: 22px;
+  height: 12px;
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.taste-cover-btn4 {
+  border-radius: 35px;
+  background: var(--accent-color);
+  width: 114px;
+  height: 24px;
+  border: none;
+  padding: 6px 16px;
+}
+.taste-cover-text-btn4 {
+  width: 82px;
+  height: 12px;
+  color: #fff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.taste-cover-header1 {
+  color: #111;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  width: 214px;
+  height: 44px;
+  margin-bottom: 8px;
 }
 .taste-img {
   margin-bottom: 36px;
@@ -271,6 +435,12 @@ body {
 }
 .taste-subtitle.dark {
   color: var(--main-text-color);
+}
+.milk {
+  background: var(--accent-color);
+}
+.nuts {
+  background: #1e1823;
 }
 
 /**------------------------MADE---------------**/
@@ -309,8 +479,22 @@ body {
   width: 516px;
 }
 .made-list {
-  padding-left: 16px;
   width: 425px;
+}
+.made-item {
+  padding-left: 16px;
+  position: relative;
+}
+.made-item:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  background-color: #4c4c4c;
+  border-radius: 50%;
+  border: 1px solid #eceded;
 }
 .made-item:not(:last-child) {
   margin-bottom: 24px;
@@ -353,6 +537,13 @@ body {
   background: #fff;
   box-shadow: 0px 9.049px 100px 0px rgba(17, 17, 17, 0.03);
   width: calc((100% - 28px * 2) / 3);
+  position: relative;
+}
+.loved-img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .loved-subtitle {
   color: var(--main-text-color);
@@ -371,8 +562,9 @@ body {
   letter-spacing: -0.02em;
 }
 .loved-btn {
+  cursor: pointer;
   color: var(--main-text-color);
-  background-color: transparent;
+  background: transparent;
   font-family: inherit;
   font-size: 18px;
   font-weight: 600;
@@ -381,6 +573,12 @@ body {
   padding: 14px 40px;
   display: block;
   margin: 0 auto;
+  transition: color 300ms ease, background 300ms ease;
+}
+.loved-btn:hover,
+.loved-btn:focus {
+  background: var(--accent-color);
+  color: var(--secondary-text-color);
 }
 
 /**-------------------------FOOTER-----------**/
@@ -450,4 +648,26 @@ body {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+}
+
+/**------------------------MODAL----------------------**/
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background: rgba(209, 199, 199, 0.4);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.modal {
+  width: 517px;
+  min-height: 794px;
+  border-radius: 15px;
+  background: #fafafa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
